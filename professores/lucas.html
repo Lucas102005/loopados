@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="perfil-container">
+
+  <div class="card-perfil">
+
+    <img src="../img/lucas.png" class="foto">
+
+    <h2>Lucas Gimenez</h2>
+    <span class="cargo">Instrutor</span>
+    <h4>20 anos</h4>
+    <h5>Analista de dados com experiência na Jacto</h5>
+    <h5>Trabalho como jovem aprendiz em suporte na Tray</h5>
+    <p>Cursando ADS 5º Termo.</p>
+    
+    <div> Hobbies: 
+        <p>Ando de moto</p>
+        <p>Gosto de programação e matemática</p>
+        <p>Jogo 
+          Rainbow 6, FIFA, Rocket League entre outras coisas</p>
+    </div>
+    <p></p>
+
+    <a href="../professores.html" class="btn">Voltar</a>
+
+  </div>
+
+</div>
+
+<script>
+window.onload = () => {
+  const src = localStorage.getItem("imgSrc");
+
+  if (src) {
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay);
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("img-anim", "img-center");
+
+    img.style.width = "100px";
+    img.style.height = "100px";
+
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+      localStorage.removeItem("imgSrc");
+    }, 800);
+  }
+};
+</script>
+
+</body>
+</html>

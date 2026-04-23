@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box; /* FIX: evita overflow horizontal */
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* BOTÕES PADRÃO */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background: #7c22c5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* LINK SOBRE (igual botão) */
+.section {
+  margin: 10px;
+  color: white;
+  text-decoration: underline;
+}
+
+/* LISTA */
+.lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 15px 0 10px; /* FIX: espaço em cima e embaixo da lista */
+  box-sizing: border-box;
+}
+
+/* CARD PROFESSOR */
+.prof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 90%;
+  padding: 12px;
+  max-width: 320px;
+  background: white;
+  border-radius: 15px;
+
+  text-decoration: none;
+  color: black;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  margin: 0 auto;
+  box-sizing: border-box; /* FIX: padding não estoura a largura */
+}
+
+/* EFEITO AO TOCAR */
+.prof:active {
+  transform: scale(0.97);
+}
+
+/* FOTO */
+.prof img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  flex-shrink: 0; /* FIX: foto não encolhe em telas pequenas */
+}
+
+/* TEXTO */
+.prof span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* PERFIL */
+.perfil-container {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box; /* FIX: evita overflow */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 70px 20px 20px; /* FIX: padding-top maior pra não sobrepor o btn-voltar-float */
+}
+
+.card-perfil {
+  width: 100%;
+  max-width: 400px;
+
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+
+  text-align: center;
+  min-height: 280px;
+  box-sizing: border-box; /* FIX: padding não estoura o max-width */
+}
+
+.foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #7c22c5;
+}
+
+.cargo {
+  color: #7c22c5;
+}
+
+/* BOTÃO VOLTAR */
+.btn-voltar-float {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: #7c22c5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 100; /* FIX: fica sempre na frente de outros elementos */
+}
+
+/* CHIPS (sobre.html) */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chips span {
+  background: #cdcdcd;
+  color: rgb(0, 0, 0);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
